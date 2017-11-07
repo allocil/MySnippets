@@ -1,0 +1,11 @@
+SYMFONY 2: NEW PROJECT
+
+INSTALACIÓN:
+composer create-project symfony/framework-standard-edition my_project_name "2.8.*"
+
+php app/console doctrine:mapping:import --force AcmeBlogBundle xml
+php app/console doctrine:mapping:convert annotation ./src
+
+...borrar los ficheros XML.
+
+php bin/console doctrine:generate:entities AppBundle
